@@ -96,7 +96,20 @@ Este sistema ofrece una solución completa para la gestión de barberías, facil
     ```
 
 2.  **MySQL:** Asegúrate de que MySQL esté en ejecución.
-3.  **Base de datos:** Crea una base de datos llamada `jardinsbarber` en tu instancia de MySQL.
+   
+3.  **Credenciales MySQL**: Asegúrate de adaptar las credenciales de MySQL en el `application.properties` (ubicado en `src/main/resources`)
+       ```properties
+    spring.datasource.username=root
+    spring.datasource.password=admin
+    ```
+    * Por defecto root y admin son las credenciales locales, cámbialo si es necesario.
+       
+4.  **Envío de correos** Por razones de seguridad, no podemos exponer las credenciales Smtp de Gmail. Para habilitarlo, configure sus propias credenciales SMTP de Gmail en el archivo `application.properties` (ubicado en `src/main/resources`).
+    ```properties
+    email.auth.smtp=-
+    password.auth.smtp=-
+    ```
+    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación.
 
 ### SSR (Frontend)
 
