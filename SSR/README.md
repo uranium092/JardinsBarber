@@ -1,6 +1,6 @@
-# JardinsBarber - SSR(frontend)
+# JardinsBarber - SSR (Frontend)
 
-Este repositorio contiene el SSR(frontend) para el proyecto JardinsBarber.
+Este repositorio contiene el SSR (Frontend) para el proyecto JardinsBarber.
 
 **Tecnologías:** JavaScript, Node.js, Express.js, EJS.
 
@@ -9,7 +9,7 @@ Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma
 
 ## Estructura del repositorio
 
-* `SSR/`: Contiene el código fuente del SSR(frontend)
+* `SSR/`: Contiene el código fuente del SSR (Frontend)
 
 ## Primeros pasos
 
@@ -19,7 +19,7 @@ Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma
     git clone https://github.com/uranium092/JardinsBarber
     ```
 
-2.  **Navegar al directorio del SSR(frontend):**
+2.  **Navegar al directorio del SSR (Frontend):**
 
     ```bash
     cd JardinsBarber/SSR
