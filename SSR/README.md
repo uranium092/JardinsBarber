@@ -30,8 +30,6 @@ Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma
 1.  **Node.js:** Descarga e instala Node.js (versión >= 20.12.2) desde [NodeOrg](https://nodejs.org/en/download).
 2.  **Backend:** Asegúrate de que el backend esté en ejecución (ver instrucciones en el README del backend).
 
-## Configuración
-
 ## Ejecución
 
 1.  **Instalar dependencias:**
