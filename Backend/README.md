@@ -37,12 +37,12 @@ Este repositorio contiene el backend (Spring Boot) para el proyecto JardinsBarbe
     ```
     * Por defecto root y admin son las credenciales locales, cámbialo si es necesario.
        
-3.  **Envío de correos** Por razones de seguridad, no podemos exponer las credenciales Smtp de Gmail. Para habilitarlo, configure sus propias credenciales SMTP de Gmail en el archivo application.properties (ubicado en src/main/resources).
+3.  **Envío de correos** Por razones de seguridad, no podemos exponer las credenciales Smtp de Gmail. Para habilitarlo, configure sus propias credenciales SMTP de Gmail en el archivo `application.properties` (ubicado en `src/main/resources`).
     ```properties
     email.auth.smtp=-
     password.auth.smtp=-
     ```
-    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación
+    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación.
 
 ## Ejecución
 
