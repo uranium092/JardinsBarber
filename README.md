@@ -25,7 +25,7 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
     * **Detalles de la creación de agendas:**
         * Al crear una agenda, se especifican la fecha y hora de inicio, y la fecha y hora de fin.
         * El sistema genera intervalos de citas dentro de ese rango, con una duración predefinida de 30 minutos.
-        * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos (por ejemplo, 8:00 a.m. a 11:30 a.m, ó 9:30 a.m. a 03:00 p.m.).
+        * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos de 30 minutos (por ejemplo, 8:00 a.m. a 11:30 a.m, ó 9:30 a.m. a 03:00 p.m.).
         * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
 * **Visualización y reserva de citas:**
     * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
