@@ -1,55 +1,54 @@
-const express=require("express");
-const app=express(); 
-const path=require("path");
-const parse=require("body-parser"); 
-const cookie=require("cookie-parser");
-const http=require("http");
-const socket=require("socket.io");
+const express = require('express');
+const app = express();
+const path = require('path');
+const parse = require('body-parser');
+const cookie = require('cookie-parser');
+const http = require('http');
+const socket = require('socket.io');
 
-app.use( express.static(path.join(__dirname,"static")) ); 
+app.use(express.static(path.join(__dirname, 'static')));
 
+app.use(parse.json());
+app.use(parse.urlencoded());
+app.use(cookie());
 
-app.use( parse.json() );
-app.use( parse.urlencoded() );
-app.use( cookie() );
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/view');
 
-app.set("view engine", "ejs"); 
-app.set("views", __dirname+"/view");
-   
-app.use("/", require("./Routers/StaticResources"));
+app.use('/', require('./Routers/StaticResources'));
 
-app.use("/usuario", require("./Routers/User")); 
+app.use('/usuario', require('./Routers/User'));
 
-app.use("/admin", require("./Routers/Admin"));
+app.use('/admin', require('./Routers/Admin'));
 
-app.use("/barbero", require("./Routers/Barbero"));
+app.use('/barbero', require('./Routers/Barbero'));
 
-app.get("/registrarCookie/:key/:rol", (req, res)=>{
-    res.cookie("id",req.params.key, {maxAge:1800000});
-    res.cookie("rol",req.params.rol, {maxAge:1800000});
-    res.send("ok");
+app.get('/registrarCookie/:key/:rol', (req, res) => {
+  res.cookie('id', req.params.key, { maxAge: 1800000 });
+  res.cookie('rol', req.params.rol, { maxAge: 1800000 });
+  res.send('ok');
 });
 
-app.get("/borrarCookies", (req, res)=>{
-    res.cookie("id",0, {maxAge:-1});
-    res.cookie("rol",null, {maxAge:-1});
-    res.redirect("/index");
+app.get('/borrarCookies', (req, res) => {
+  res.cookie('id', 0, { maxAge: -1 });
+  res.cookie('rol', null, { maxAge: -1 });
+  res.redirect('/index');
 });
 
-app.use((req,res)=>{
-    res.status(404).render("404");
-})
-
-const port=process.env.PORT || 16000
-
-const server=http.createServer(app).listen(port,()=>{
-   console.log("Server Running on port 16000") 
+app.use((req, res) => {
+  res.status(404).render('404');
 });
 
-const io=socket(server);
-io.on("connection", (client)=>{
-    client.on("agendar", (id,end)=>{
-        client.broadcast.emit("refresh", id);
-        end();
-    });
+const port = 16000;
+
+const server = http.createServer(app).listen(port, () => {
+  console.log('Server Running on port 16000');
+});
+
+const io = socket(server);
+io.on('connection', (client) => {
+  client.on('agendar', (id, end) => {
+    client.broadcast.emit('refresh', id);
+    end();
+  });
 });
