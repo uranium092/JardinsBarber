@@ -21,11 +21,19 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
     * Las sesiones de usuario se mantienen activas durante un período limitado para mayor comodidad.
 * **Gestión de agendas:**
     * Tanto administradores como barberos pueden crear sus propias agendas, definiendo rangos de fechas y horas de atención.
-    * El sistema permite configurar la duración de las citas y ofrece recomendaciones para optimizar la visualización de la agenda.
-    * La agenda tiene una duracion maxima de 15 dias.
+    * El sistema permite configurar la duración de las citas (con un máximo de 15 días) y ofrece recomendaciones para optimizar la visualización de la agenda.
+    * **Detalles de la creación de agendas:**
+        * Al crear una agenda, se especifican la fecha y hora de inicio, y la fecha y hora de fin.
+        * El sistema genera intervalos de citas dentro de ese rango, con una duración predefinida (por ejemplo, 30 minutos).
+        * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos (por ejemplo, 8:00 a.m. a 11:30 a.m.).
+        * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
 * **Visualización y reserva de citas:**
     * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
     * El sistema muestra información detallada sobre las citas reservadas y permite a los usuarios cancelarlas si es necesario.
+    * **Detalles de la visualización y reserva:**
+        * Los usuarios ven la agenda del barbero seleccionado, con la hora de inicio y fin de cada cita (duración fija).
+        * Una vez reservada una cita, el usuario no puede agendar otra hasta que la actual finalice o sea cancelada.
+        * Si el usuario tiene una cita, podra ver los detalles de esa cita (datos del barbero, hora, dia, y un temporizador), de lo contrario, podra agendar una.
 * **Actualización de datos:**
     * Todos los roles pueden actualizar sus datos personales y contraseñas.
     * El sistema ofrece un mecanismo de recuperación de contraseñas para usuarios que olvidan sus credenciales.
