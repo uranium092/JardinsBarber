@@ -28,6 +28,8 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
         * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos de 30 minutos (por ejemplo, 8:00 a.m. a 11:30 a.m, ó 9:30 a.m. a 03:00 p.m.).
         * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
 * **Visualización y reserva de citas:**
+    * Después de registrarse, los usuarios pueden examinar los perfiles de los barberos. Para ver la agenda y la disponibilidad de un barbero, deben pulsar el botón 'Agenda'. Para conocer más sobre el 
+      barbero, pueden pulsar cualquier otra parte del perfil.
     * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
     * El sistema muestra información detallada sobre las citas reservadas y permite a los usuarios cancelarlas si es necesario.
     * **Detalles de la visualización y reserva:**
