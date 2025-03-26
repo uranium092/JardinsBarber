@@ -30,6 +30,16 @@ public class ServicioUsuario {
 	public Usuario actualizarUser(Usuario u) {
 		return repositorioUsuario.save(u);
 	}
+
+  public Usuario existencia(String email, String password){
+		List<Usuario> users=repositorioUsuario.findAll();
+    for(Usuario user:users){
+      if(email.equals(user.getEmail_user()) && password.equals(user.getPassword_user())){
+        return user;
+      }
+    }
+    return null;
+	}
 	
 }
 

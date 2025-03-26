@@ -10,25 +10,19 @@ window.addEventListener(
         e.preventDefault();
         if (inp1.value == '' || inp2.value == '')
           return $('#message').text('Completar todos los campos');
-        fetch('http://localhost:8080/usuario/traerTodo').then((response) => {
-          response.json().then((body) => {
-            let boolean = false;
-            let key = 0;
-            body.forEach((element) => {
-              if (element.email_user == inp1.value && element.password_user == inp2.value) {
-                boolean = true;
-                key = element.id_user;
-              }
-            });
-            if (boolean == true) {
-              fetch('/registrarCookie/' + key + '/usuario').finally(() => {
+        fetch('http://localhost:8080/usuario/existencia/' + inp1.value + '/' + inp2.value).then(
+          (response) => {
+            if (response.status == 404) {
+              $('#message').text('Los datos son erroneos');
+              return;
+            }
+            response.json().then((body) => {
+              fetch('/registrarCookie/' + body.id_user + '/usuario').finally(() => {
                 document.location.href = '/index';
               });
-            } else {
-              $('#message').text('Los datos son erroneos');
-            }
-          });
-        });
+            });
+          }
+        );
       },
       false
     );

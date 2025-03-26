@@ -1,6 +1,7 @@
 package com.faraday.project.controlador;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,13 @@ public class ControladorUsuario {
 	public ResponseEntity<?> actualizar(@RequestBody Usuario user){
 		return ResponseEntity.status(HttpStatus.OK).body(servicioUsuario.actualizarUser(user)); 
 	}
+
+  @GetMapping("/existencia/{email}/{pass}")
+  public ResponseEntity<?> existencia(@PathVariable String email, @PathVariable String pass){
+    Usuario match=servicioUsuario.existencia(email, pass);
+    if(match!=null) return ResponseEntity.status(HttpStatus.OK).body(match);
+    return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); 
+  }
 	
 	@GetMapping("/existenciaCorreo/{email}")
 	public ResponseEntity<?> existsEmail(@PathVariable String email){

@@ -8,5 +8,4 @@ import com.faraday.project.entidades.Usuario;
 
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario,Integer> {
-	
 }
