@@ -63,7 +63,7 @@
             <div class="barber" disabled="true">
                 <% data.forEach(function(barber) { %>
                     <div class="barbero item-barber" data-key="<%=barber.idBarber%>">
-                        <img src="<%= barber.profilePicture == "" ? "http://3.144.244.103/images/same/profile.png" : "http://3.144.244.103/images/" + barber.idBarber + "/" + barber.profilePicture %>" alt="" width="50px" height="50px" data-key="<%=barber.idBarber%>" class="item-barber">                 
+                        <img src="<%= barber.profilePicture == "" ? "http://localhost:8080/images/same/profile.png" : "http://localhost:8080/images/" + barber.idBarber + "/" + barber.profilePicture %>" alt="" width="50px" height="50px" data-key="<%=barber.idBarber%>" class="item-barber">                 
                         <p data-key="<%=barber.idBarber%>" class="item-barber"><%= barber.nameBarber %></p>
                         <button id="botonAgendar"><a href="/usuario/verAgenda/<%=barber.idBarber%>" id="agenda">Agenda</a></button>
                     </div>

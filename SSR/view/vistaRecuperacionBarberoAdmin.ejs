@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperar Contraseña</title>
-    <link rel="stylesheet" href="/usuario/styles/vistaRecuperacionBarberoAdmin.css">
-    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
-</head>
-<style>
-</style>
-<body>
+    <link rel="stylesheet" href="/usuario/styles/vistaRecuperacionBarberoAdmin.css" />
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon" />
+  </head>
+  <style></style>
+  <body>
     <form action="">
-        <h1>Digite su correo electrónico</h1>
-        <span>Ingrese su correo electrónico para recibir un enlace de recuperación. Verifique su bandeja de entrada y siga el enlace para crear una nueva contraseña.</span>
-        <input type="email" id="email" class="correo">
-        <p class="mssEmail"></p>
-        <input type="submit" class="boton">
+      <h1>Digite su correo electrónico</h1>
+      <span
+        >Ingrese su correo electrónico para recibir un enlace de recuperación. Verifique su bandeja
+        de entrada y siga el enlace para crear una nueva contraseña.</span
+      >
+      <input type="email" id="email" class="correo" />
+      <p class="mssEmail"></p>
+      <input type="submit" class="boton" />
     </form>
-    <img src="https://i.gifer.com/ZKZg.gif" alt="" width="50px" height="50px" class="loader" hidden>
-</body>
-<script src="/usuario/JS/jquery-3.7.1.js"></script>
+    <img
+      src="https://i.gifer.com/ZKZg.gif"
+      alt=""
+      width="50px"
+      height="50px"
+      class="loader"
+      hidden
+    />
+  </body>
+  <script src="/usuario/JS/jquery-3.7.1.js"></script>
 
-<script>
-    $(document).ready(function(){
-        $("form").submit(function(e){
-            e.preventDefault();
-            if($("#email").val()==""){
-                return $(".mssEmail").text("Debe especificar un correo");
-            }
-            document.querySelector(".loader").hidden=false;
-            let fieldEmail=$("#email").val();
-            fetch("http://3.144.244.103/barbero/existenciaCorreo/"+fieldEmail).then(response=>{
-                if(response.status==404){
-                    document.querySelector(".loader").hidden=true;
-                    return $(".mssEmail").text("El correo no está registrado");
-                }
-                response.json().then(body=>{
-                    
-                    fetch("/barbero/enviarCorreo",{method:"POST", headers:{'Content-Type':"application/json"}, body:JSON.stringify(body)}).then(res=>{
-                        document.querySelector(".loader").hidden=true;
-                        $(".mssEmail").text("Correcto! Revisa tu correo");
-                    }).catch(err=>{
-                        alert("Ocurrió un error :-(");
-                    }).finally(()=>{
-                        setTimeout(()=>{
-                            document.location.href="/loginBarber";
-                    },1500);
-                    });
-                });
-            });
+  <script>
+    $(document).ready(function () {
+      $('form').submit(function (e) {
+        e.preventDefault();
+        if ($('#email').val() == '') {
+          return $('.mssEmail').text('Debe especificar un correo');
+        }
+        document.querySelector('.loader').hidden = false;
+        let fieldEmail = $('#email').val();
+        fetch('http://localhost:8080/barbero/existenciaCorreo/' + fieldEmail).then((response) => {
+          if (response.status == 404) {
+            document.querySelector('.loader').hidden = true;
+            return $('.mssEmail').text('El correo no está registrado');
+          }
+          response.json().then((body) => {
+            fetch('/barbero/enviarCorreo', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(body),
+            })
+              .then((res) => {
+                document.querySelector('.loader').hidden = true;
+                $('.mssEmail').text('Correcto! Revisa tu correo');
+              })
+              .catch((err) => {
+                alert('Ocurrió un error :-(');
+              })
+              .finally(() => {
+                setTimeout(() => {
+                  document.location.href = '/loginBarber';
+                }, 1500);
+              });
+          });
         });
-    });    
-</script>
-
+      });
+    });
+  </script>
 </html>
