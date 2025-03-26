@@ -48,4 +48,4 @@ Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma
 
 ## Recomendaciones
 
-* Asegúrate de que el backend se esté ejecutando en el puerto `:8080`, estrictamente.
+* Asegúrate de que el backend se esté ejecutando estrictamente en el puerto `:8080`.
