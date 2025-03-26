@@ -6,9 +6,7 @@ document.querySelector('form').addEventListener(
     let identificador = document.querySelector('#id').value;
 
     let timeInicio = document.querySelector('#timeInicio').value;
-    console.log(timeInicio);
     let fechaInicio = document.querySelector('#inicio').value;
-    console.log(fechaInicio);
 
     let arrayAnioMesDiaInicio = fechaInicio.split('-');
     let arrayHoraMinutoInicio = timeInicio.split(':');

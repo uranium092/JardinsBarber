@@ -34,4 +34,4 @@ Backend/build/
 Backend/.vscode/
 
 # Frontend (React)
-Frontend/node_modules/
+SSR/node_modules/

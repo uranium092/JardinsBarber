@@ -24,8 +24,8 @@ app.use('/admin', require('./Routers/Admin'));
 app.use('/barbero', require('./Routers/Barbero'));
 
 app.get('/registrarCookie/:key/:rol', (req, res) => {
-  res.cookie('id', req.params.key, { maxAge: 1800000 });
-  res.cookie('rol', req.params.rol, { maxAge: 1800000 });
+  res.cookie('id', req.params.key, { maxAge: 3600000 });
+  res.cookie('rol', req.params.rol, { maxAge: 3600000 });
   res.send('ok');
 });
 
@@ -42,7 +42,7 @@ app.use((req, res) => {
 const port = 16000;
 
 const server = http.createServer(app).listen(port, () => {
-  console.log('Server Running on port 16000');
+  console.log('Server Running on http://localhost:16000');
 });
 
 const io = socket(server);

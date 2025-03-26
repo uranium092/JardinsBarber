@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.faraday.project.entidades.Usuario;
+import com.faraday.project.services.MailService;
 import com.faraday.project.services.ServicioUsuario;
-import MailManager.SendMail;
+
+import jakarta.mail.MessagingException;
 
 @RestController
 @RequestMapping("/usuario")
@@ -27,6 +29,8 @@ public class ControladorUsuario {
 	@Autowired
 	private ServicioUsuario servicioUsuario;
 	
+  @Autowired
+  private MailService mailService;
 	
 	@GetMapping("/traerTodo")
 	public ResponseEntity<?> traerTodo(){
@@ -64,13 +68,9 @@ public class ControladorUsuario {
 	}
 	
 	@PostMapping("/enviarEmail")
-	public ResponseEntity<?> sendEmail(@RequestBody HashMap<String,String> data){
-		new SendMail(data.get("to"), data.get("subject"), data.get("body"));
+	public ResponseEntity<?> sendEmail(@RequestBody HashMap<String,String> data) throws MessagingException{
+		mailService.sendEmail(data.get("to"), data.get("subject"), data.get("body"));
 		return ResponseEntity.ok().build();
 	}
 	
-	@GetMapping("/hk")
-	public String x() {
-		return "Funciona!!!";
-	}
 }
