@@ -2,6 +2,13 @@
 
 Este repositorio contiene el backend (Spring Boot) y el SSR (Frontend) para el proyecto JardinsBarber.
 
+**Tecnologías:** 
+* **Backend:** Java, Spring Boot, Maven, Spring Data, Hibernate, MySQL.
+* **SSR:** JavaScript, Node.js, Express.js, EJS.
+
+### Nota
+* Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma no se puede integrar a Meta-Instagram.
+
 ## Estructura del repositorio
 
 * `Backend/`: Contiene el código fuente del backend (Spring Boot).
@@ -97,16 +104,6 @@ Este repositorio contiene el backend (Spring Boot) y el SSR (Frontend) para el p
     ```
 
     * El frontend estará disponible en `http://localhost:16000`.
-
-## Tecnologías
-
-* **Backend:** Java, Spring Boot, Maven, Spring Data, Hibernate, MySQL.
-* **SSR:** JavaScript, Node.js, Express.js, EJS.
-
-## Nota
-
-* Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma no se puede integrar a Meta-Instagram.
-* El backend debe de estar corriendo estrictamente en el puerto `:8080`.
 
 ## Recomendaciones
 
