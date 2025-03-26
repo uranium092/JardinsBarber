@@ -1,0 +1,37 @@
+# Backend (Spring Boot)
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!Backend/src/main/**/target/
+!Backend/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+Backend/build/
+!Backend/src/main/**/build/
+!Backend/src/test/**/build/
+
+### VS Code (Backend) ###
+Backend/.vscode/
+
+# Frontend (React)
+Frontend/node_modules/
