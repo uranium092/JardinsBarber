@@ -24,7 +24,7 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
     * El sistema permite configurar la duración de las citas (con un máximo de 15 días) y ofrece recomendaciones para optimizar la visualización de la agenda.
     * **Detalles de la creación de agendas:**
         * Al crear una agenda, se especifican la fecha y hora de inicio, y la fecha y hora de fin.
-        * El sistema genera intervalos de citas dentro de ese rango, con una duración predefinida (por ejemplo, 30 minutos).
+        * El sistema genera intervalos de citas dentro de ese rango, con una duración predefinida de 30 minutos.
         * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos (por ejemplo, 8:00 a.m. a 11:30 a.m.).
         * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
 * **Visualización y reserva de citas:**
@@ -37,6 +37,16 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
 * **Actualización de datos:**
     * Todos los roles pueden actualizar sus datos personales y contraseñas.
     * El sistema ofrece un mecanismo de recuperación de contraseñas para usuarios que olvidan sus credenciales.
+
+## Credenciales iniciales para probar el sistema
+
+* **Administrador:**
+    * Al clonar el repositorio, el sistema inicializa automáticamente un usuario administrador.
+    * Este usuario es el punto de partida para configurar el negocio, creando barberos y agendas.
+* **Barbero de prueba:**
+    * Para experimentar la funcionalidad del rol barbero, puedes iniciar sesión con las siguientes credenciales:
+        * Correo electrónico: `johnDoe@test.example.com`
+        * Contraseña: `development@password`
 
 Este sistema ofrece una solución completa para la gestión de barberías, facilitando la administración del negocio y mejorando la experiencia de los usuarios.
 
