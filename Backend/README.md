@@ -42,7 +42,8 @@ Este repositorio contiene el backend (Spring Boot) para el proyecto JardinsBarbe
     email.auth.smtp=-
     password.auth.smtp=-
     ```
-    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación.
+    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación. equivalente a la contraseña de aplicación. Si 
+    no especifica nada, el sistema tendrá la funcionalidad de notificación desactivada.
 
 ## Ejecución
 
