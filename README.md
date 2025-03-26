@@ -1,10 +1,41 @@
 # JardinsBarber
 
-Este repositorio contiene el backend (Spring Boot) y el SSR (Frontend) para el proyecto JardinsBarber.
+Este proyecto es un sistema integral de gestión de citas para barberías, diseñado para optimizar la administración del negocio y mejorar la experiencia tanto de los barberos como de los usuarios.
+
+## Funcionalidades principales
+
+* **Gestión de roles:**
+    * El sistema distingue tres roles principales: administrador (que también actúa como barbero), barbero común y usuario.
+    * El administrador tiene control total sobre el negocio, incluyendo la gestión de personal (creación, actualización y eliminación de barberos) y la configuración de su propia agenda.
+* **Gestión de perfiles:**
+    * Todos los barberos, incluido el administrador, pueden gestionar su perfil, incluyendo la foto de perfil.
+    * El sistema asigna una foto de perfil por defecto a los barberos que no suben una propia.
+* **Notificaciones por correo electrónico:**
+    * El sistema envía notificaciones por correo electrónico a todos los roles sobre acciones importantes relacionadas con sus cuentas, como solicitudes y confirmaciones de cambio de contraseña.
+    * Los usuarios también reciben notificaciones sobre sus citas agendadas, incluyendo detalles relevantes.
+* **Agendamiento en tiempo real:**
+    * La reserva de citas se refleja en tiempo real en las agendas de los barberos, permitiendo a otros usuarios ver la disponibilidad actualizada.
+    * El barbero tambien ve dicha actualizacion.
+* **Seguridad y manejo de sesiones:**
+    * El sistema implementa medidas de seguridad para proteger la navegación y restringir el acceso a rutas no autorizadas.
+    * Las sesiones de usuario se mantienen activas durante un período limitado para mayor comodidad.
+* **Gestión de agendas:**
+    * Tanto administradores como barberos pueden crear sus propias agendas, definiendo rangos de fechas y horas de atención.
+    * El sistema permite configurar la duración de las citas y ofrece recomendaciones para optimizar la visualización de la agenda.
+    * La agenda tiene una duracion maxima de 15 dias.
+* **Visualización y reserva de citas:**
+    * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
+    * El sistema muestra información detallada sobre las citas reservadas y permite a los usuarios cancelarlas si es necesario.
+* **Actualización de datos:**
+    * Todos los roles pueden actualizar sus datos personales y contraseñas.
+    * El sistema ofrece un mecanismo de recuperación de contraseñas para usuarios que olvidan sus credenciales.
+
+Este sistema ofrece una solución completa para la gestión de barberías, facilitando la administración del negocio y mejorando la experiencia de los usuarios.
 
 **Tecnologías:** 
 * **Backend:** Java, Spring Boot, Maven, Spring Data, Hibernate, MySQL.
 * **SSR:** JavaScript, Node.js, Express.js, EJS.
+* **Tecnologias SSR (Frontend):** JQuery, moment.js
 
 ### Nota
 * Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma no se puede integrar a Meta-Instagram.
@@ -108,3 +139,4 @@ Este repositorio contiene el backend (Spring Boot) y el SSR (Frontend) para el p
 ## Recomendaciones
 
 * Asegúrate de que el backend se esté ejecutando estrictamente en el puerto `:8080`.
+
