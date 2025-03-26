@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Agenda</title>
+    <link rel="stylesheet" href="/admin/styles/verAgenda.css">
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <header>
+        <nav>
+            <div class="logo">Jardin's Barber</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index">Inicio</a></li>
+                    <li><a  href="/barbero/verAgenda" >Agenda</a></li>
+                    <li><a href="/barbero/datosBarbero">Perfil</a></li>
+                    <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <input type="text" hidden value="<%=currentBarber%>" id="idBarber">
+    <input type="text" hidden id="everything" value="<%=JSON.stringify(data)%>">
+    <input type="text" hidden id="current" value="Selecciona una fecha">
+    
+    <div class="contenedor">
+        <div class="contenedor-fecha">
+            <h2>Fechas Disponibles</h2>
+            <ul id="fechaList">
+                <%data.forEach(set=>{%>
+                    <li data-key="<%=set.fecha%>" class="dia"><%=set.fecha%></li>
+                <%});%>
+            </ul>
+        </div>
+        <div class="agenda">
+            <h2 class="tituloFecha">Selecciona una fecha</h2>
+            <div class="agenda-container">
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="/moment.js"></script>
+<script src="/usuario/JS/jquery-3.7.1.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/admin/JS/despliegueCitas.js"></script>
+<script src="/admin/JS/logicaTiempoReal.js"></script>
+</html>

@@ -1,0 +1,1 @@
+console.log(dataBarbero==[] ? /barbero/definirAgenda : /barbero/datosBarbero);

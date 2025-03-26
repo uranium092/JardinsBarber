@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardin's Barber -Usuario</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="/usuario/styles/VistaUsuarioInicio.css">
+    <script src="/moment.js"></script>
+    <script src="/precise-range.js"></script>
+    <link rel="stylesheet" href="/usuario/styles/cronometro.css">
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+
+
+
+    
+
+
+
+
+
+</head>
+<style>
+</style>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Jardin's Barber</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a class="agendar" href>Agendar Cita</a></li>
+					<li><a href="/usuario/datosUsuario">Perfil</a></li>
+                    <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+
+
+
+
+    <section class="ini">
+        <h1 class="rr">Experimenta cortes de cabello y barba de calidad en Jardin's Barber</h1>
+        <p>Bienvenido a Jardin's Barber! Nuestro salón ofrece cortes de cabello y barba de calidad para que luzcas siempre impecable.</p>
+        <button class="boton agendar">Agendar cita</button>
+    </section>
+
+    
+    <section class="barberos">
+        <%if(dataUsuario==""){%>
+            <h2>Nuestros Expertos</h2>
+            <div class="barber" disabled="true">
+                <% data.forEach(function(barber) { %>
+                    <div class="barbero item-barber" data-key="<%=barber.idBarber%>">
+                        <img src="<%= barber.profilePicture == "" ? "http://3.144.244.103/images/same/profile.png" : "http://3.144.244.103/images/" + barber.idBarber + "/" + barber.profilePicture %>" alt="" width="50px" height="50px" data-key="<%=barber.idBarber%>" class="item-barber">                 
+                        <p data-key="<%=barber.idBarber%>" class="item-barber"><%= barber.nameBarber %></p>
+                        <button id="botonAgendar"><a href="/usuario/verAgenda/<%=barber.idBarber%>" id="agenda">Agenda</a></button>
+                    </div>
+                <% }); %>
+            </div>
+        <%}else{%>
+
+        <form action="" class="formu">
+                <input type="text" hidden value="<%=JSON.stringify(dataUsuario)%>" id="body">
+                <input type="text" hidden value="<%=dataUsuario[0].barbero.idBarber%>" id="idBarber">
+                
+            <h1>TU PROXIMA CITA</h1>
+
+
+            <h3 id="fechaUsuario">  </h3>
+            <div id="datosCita">
+                <h1>Datos de tu barbero</h1>
+                <h3>Nombre</h3>
+                <h6 ><%=dataUsuario[0].barbero.nameBarber%></h6>
+                <h3>Email</h3>
+                <h6 ><%=dataUsuario[0].barbero.emailBarber%> </h6>
+                <h3>Telefono</h3>
+                <h6><%=dataUsuario[0].barbero.phoneBarber%></h6>
+            </div>
+            <div class="container">
+                <h1>PARA TU CITA FALTA</h1>
+                <div class="row">
+                   <div class="col-lg-6 offset-3">
+                      <div class="timer">
+                         <div>
+                            <span class="days" id="day"></span> 
+                            <div class="smalltext">Dias</div>
+                         </div>
+                         <div>
+                            <span class="hours" id="hour"></span> 
+                            <div class="smalltext">Horas</div>
+                         </div>
+                         <div>
+                            <span class="minutes" id="minute"></span> 
+                            <div class="smalltext">Minutos</div>
+                         </div>
+                         <div>
+                            <span class="seconds" id="second"></span> 
+                            <div class="smalltext">Segundos</div>
+                         </div>
+                         <p id="time-up"></p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <input id="btnCancelarCita" type="submit" value="Cancelar Cita">
+        </form>
+
+
+
+
+
+
+
+
+
+            <div id="resultado">
+                
+            </div>
+            <%dataUsuario.forEach(function(tiki) { %>
+                <div disabled>
+                    <p hidden   id="idUsuario" ><%=tiki.usuario.id_user%></p>
+                    <p hidden  id="inicioCita" ><%=tiki.inicioCita%></p>
+                </div>
+            <% })%>
+            </div>
+        <%}%>
+    </section>
+    
+    <section class="horarios">
+        <h2>Nuestro Horario</h2>
+        <div class="dias">
+            <div class="dia">
+                <h3>LUN</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h3>MAR</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h3>MIE</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h3>JUE</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h3>VIE</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+            <div class="dia">
+                <h3>SÁB</h3>
+                <div class="tiempo">
+                    <span>9:30 AM</span>
+                    <span class="separator">hasta</span>
+                    <span>7:30 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+    <script>
+        
+    </script>
+</body>
+<script src="/admin/JS/jquery-3.7.1.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/usuario/JS/verBarberos.js"></script>
+<script src="/usuario/JS/logicaIndex.js"></script>
+<script src="/usuario/JS/cancelacionDeCita.js"></script>
+<script>
+
+
+moment.lang('es', {
+    months: 'Enero_Febrero_Marzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre'.split('_'),
+    monthsShort: 'Enero._Feb._Mar_Abr._May_Jun_Jul._Ago_Sept._Oct._Nov._Dec.'.split('_'),
+    weekdays: 'Domingo_Lunes_Martes_Miercoles_Jueves_Viernes_Sabado'.split('_'),
+    weekdaysShort: 'Dom._Lun._Mar._Mier._Jue._Vier._Sab.'.split('_'),
+    weekdaysMin: 'Do_Lu_Ma_Mi_Ju_Vi_Sa'.split('_')
+  }
+  );
+
+
+
+
+
+
+    let idUsuario = document.getElementById("idUsuario");
+    let fechaFinal = document.getElementById("inicioCita").textContent;
+
+if (idUsuario != null) {
+        var final = moment(fechaFinal, "YYYY-MM-DDTHH:mm:ss");
+        var formatoUsuario = final.format("dddd[, ]D[ de ]MMMM[ - ]h:mmA");
+
+        let funcion = setInterval(function() {
+        var inicio = moment();
+        var diff = moment.preciseDiff(inicio,final, true);
+        console.log(moment("2024-08-11:08:00","YYYY-MM-DDTHH:mm:ss").diff(moment()));
+        if (moment(final,"YYYY-MM-DDTHH:mm:ss").diff(moment())<0) {
+            $(".formu").css("display","none");
+            clearInterval(funcion);
+        } else {
+            $("#day").html(diff.days);
+            $("#hour").html(diff.hours);
+            $("#minute").html(diff.minutes);
+            $("#second").html(diff.seconds);
+            $("#fechaUsuario").html(formatoUsuario);
+        }
+    }, 1000); 
+}
+</script>
+</html>

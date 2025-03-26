@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar datos</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/usuario/styles/actualizarDatos.css">
+</head>
+<body>
+
+        <header>
+            <nav>
+                <div class="logo">Jardin's Barber</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/index">Inicio</a></li>
+                        <li><a href="/usuario/datosUsuario">Perfil</a></li>
+                        <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+    <div id="contenedor1">
+        <div id="contenedor2">
+                <form action="">
+                    <h2 class="tex">Actualizar Datos</h2>
+                        <div class="data">
+                            
+                            <input id="id_user" type="number" hidden disabled  value="<%=id_user%>">
+
+                            <h1>Nombre</h1>
+                            <input id="name_user" placeholder="Nombre"  type="text" value="<%=name_user%>">
+
+                            <h1>Telefono</h1>
+                            <input id="phone_user" placeholder="Numero de telefono" type="text" value="<%=phone_user%>">
+                            
+                            <h1>Correo</h1>
+                            <input id="email_user" disabled placeholder="Correo electronico" type="email" value="<%=email_user%>">
+
+                            <input id="password_user" type="password" disabled  hidden value="<%=password_user%>">
+                           
+                        </div>
+
+                        <div class="boto">
+                            <button>Actualizar</button>
+                        </div>
+                </form>
+        </div>
+    </div>
+   
+
+    <footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+    <script src="/usuario/JS/ActualizarDatos.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.cerrar{
+    color: rgb(239,184,16);
+    border-radius: 0.5rem;
+    padding: 5px 18px;
+}
+
+
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(239,184,16);
+    width: 300px;
+    margin: 70px auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.conte {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.conte label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.conte #inicio,
+.conte #timeInicio,
+.conte #fin,
+.conte #timeFin,
+.boton{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.conte #inicio,
+.conte #timeInicio,
+.conte #fin,
+.conte #timeFin{
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.boton{
+    background-color: rgb(239, 184, 16);
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+
+.boton:hover {
+    background-color:rgb(255, 191, 0);
+}
+
+input[disabled] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0 0 25px;
+}
+footer #footerIcons p{
+    display: inline;
+}
+footer div p{
+    margin-bottom: 7px;
+}
+.fa-brands{
+    color: rgb(239,184,16);
+}

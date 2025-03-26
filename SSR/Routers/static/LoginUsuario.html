@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/LoginUsuario/styles.css">
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <form action="" id="formUsuario">
+            <div id="estructuraFormUser">
+                <h1>Iniciar Sesión</h1>
+                <p>¡Bienvenido de vuelta! Nos alegra verte de nuevo.</p>
+                <div id="correo">
+                    <label for="campoCorreo">Correo electrónico</label><br>
+                    <input type="email" name="campoCorreo" id="campoCorreo" placeholder="Correo Electrónico">
+                </div>
+                <div id="contrasena">
+                    <label for="campoContrasena">Constraseña</label><br>
+                    <input type="password" name="campoContrasena" id="campoContrasena" placeholder="Contraseña">
+                    <p><a href="/vistaRecuperarUsuario">¿Olvidaste tu contraseña?</a></p>
+                </div>
+                <button type="submit" id="iniciarSesion">Continuar</button>
+                <a href="/regUser">Crear una cuenta</a>
+            </div>
+    </form>
+    <p id="message"></p>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</script>
+<script src="/LoginUsuario/main.js"></script>
+
+</html>

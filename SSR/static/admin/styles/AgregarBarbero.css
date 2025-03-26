@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.cerrar{
+    color: rgb(239,184,16);
+    border-radius: 0.5rem;
+    padding: 5px 18px;
+}
+
+
+
+
+
+.contenedor {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(239,184,16);
+    width: 600px;
+    margin: 0 auto; 
+    margin-bottom: 35px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+#name, #phone, #email , #pass, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+.boton{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(239,184,16);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: rgb(255, 191, 0);
+}
+
+#photo{
+    display: none;
+}
+
+.boton-subir{
+    background-color: #bbbbbb;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: white;
+}
+
+.boton-subir:hover{
+    background-color: #9c9c9c;
+}
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0 0 25px;
+}
+footer #footerIcons p{
+    display: inline;
+}
+footer div p{
+    margin-bottom: 7px;
+}
+.fa-brands{
+    color: rgb(239,184,16);
+}
+
+
+
+
+
+
+
+

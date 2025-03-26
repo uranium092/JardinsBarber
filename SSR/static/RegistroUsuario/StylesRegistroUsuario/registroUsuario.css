@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://png.pngtree.com/background/20230519/original/pngtree-barbershop-picture-image_2651923.jpg");
+}
+
+h1 {
+    color: rgb(239, 184, 16);
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+button {
+    background-color: rgb(239, 184, 16);
+    border: none;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 20px;
+}
+
+input {
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input::placeholder {
+    font-size: 1em;
+    color: gray;
+}
+
+#contenedor section {
+    grid-column: span 1/2;
+}
+
+#contenedor aside {
+    grid-column: 2/-1;
+    width: 100%;
+}
+
+aside {
+    border-radius: 2%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 15px 10px 25px rgb(121, 119, 119);
+}
+
+#contenedor2 {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+img {
+    width: 200px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0 0 25px;
+    width: 100%;
+}
+footer #footerIcons p{
+    display: inline;
+}
+footer div p{
+    margin-bottom: 7px;
+}
+.fa-brands{
+    color: rgb(239,184,16);
+}
+
+@media only screen and (max-width: 1000px) {
+    #contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    #contenedor section, #contenedor aside {
+        grid-column: span 1;
+    }
+
+    #contenedor2 {
+        flex-direction: column;
+    }
+
+
+    p {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+}

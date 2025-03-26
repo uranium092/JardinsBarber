@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Perfil</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/barbero/styles/VistaDatosBarbero.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Jardin's Barber</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index">Inicio</a></li>
+                    <li><a  href="/barbero/verAgenda" >Agenda</a></li>
+                    <li><a href="/barbero/datosBarbero">Perfil</a></li>
+                    <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="conte-perfil">
+        <img src="<%=data.profilePicture==""?"http://3.144.244.103/images/same/profile.png":"http://3.144.244.103/images/"+data.idBarber+"/"+data.profilePicture%>" alt="" id="photo_img">&nbsp;
+        <div class="conte-datos">
+            <label for="">Nombre</label>
+            <h1><%=data.nameBarber%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Celular</label>
+            <h1><%=data.phoneBarber%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Correo</label>
+            <h1><%=data.emailBarber%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Contraseña</label>
+            <h1><%="*".repeat(data.passwordBarber.length)%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Descripción</label>
+            <h1><%=data.descriptionBarber %></h1>
+        </div>
+
+        <div class="botones">
+            <a href="/barbero/actualizarDatosBarbero" id="actualizar"><button id="btn" type="button">Actualizar Datos</button></a>
+            <a href="/barbero/cambiar" id="contra"><button id="btn2" type="button">Cambiar Contraseña</button></a>
+        </div>
+    </div>
+
+
+    <footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+</body>
+</html>

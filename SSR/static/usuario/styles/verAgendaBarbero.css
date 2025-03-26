@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a,.agend {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.cerrar{
+    color: white;
+    padding: 5px 15px;
+    border-radius: 6px;
+
+}
+
+
+
+
+
+.mensaje-nta{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(239,184,16);
+    width: 600px;
+    margin: 0 auto; 
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.mensaje-nta h1{
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #6b6b6b;
+
+}
+
+.conte-datos {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.conte-datos h1 {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    font-size: 18px;
+    text-align: left;
+}
+.conte-datos label {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.mensaje-nta h2{
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-fecha {
+    width: 30%;
+    margin-right: 20px;
+    
+}
+
+.contenedor-fecha ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenedor-fecha li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    
+}
+
+.contenedor-fecha li:hover {
+    background-color: #e0e0e0;
+}
+
+.agenda {
+    width: 70%;
+}
+
+.agenda h2 {
+    margin-top: 0;
+}
+
+#cantidadEspectadores {
+    background-color: rgb(247, 199, 55);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.agenda-container {
+    padding: 10px;
+}
+
+.cita {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid rgb(247, 199, 55);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hora {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;;
+}
+
+.agendada {
+    background-color: rgb(155, 155, 155);
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: no-drop;
+}
+
+.agendar {
+    background-color: rgb(239,184,16);
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton-agendar{
+    background-color: transparent;
+    border: none;
+}
+
+

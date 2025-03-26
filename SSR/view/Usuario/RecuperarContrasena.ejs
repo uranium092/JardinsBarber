@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar constraseña</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/usuario/styles/RecuperarContrasena.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <h2>Recuperar Contraseña</h2>
+            <h1>Nueva Contraseña</h1>
+            <input type="password" id="contra" class="cont"><br>
+            <h1>Confirmacion Contraseña</h1>
+            <input type="password" id="confirm" class="cont">
+            <input type="text" hidden value="<%=JSON.stringify(body)%>" id="body">
+            <input type="submit" class="boton">
+        </form>
+    </div>
+    <p class="info"></p>
+</body>
+<script src="/usuario/JS/jquery-3.7.1.js"></script>
+<script src="/usuario/JS/recuperarContrasena.js"></script>
+</html>

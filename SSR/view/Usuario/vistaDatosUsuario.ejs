@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Perfil</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/usuario/styles/VistaUsuario.css">
+   
+</head> 
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Jardin's Barber</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index">Inicio</a></li>
+					<li><a href="/usuario/datosUsuario">Perfil</a></li>
+                    <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="conte-perfil">
+        <img src="https://cdn.icon-icons.com/icons2/2942/PNG/512/profile_icon_183860.png" alt="" width="30px" height="30px">&nbsp;
+        <div class="conte-datos">
+            <label for="">Nombre:</label>
+            <h1><%=name_user%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Numero de Celular:</label>
+            <h1><%=phone_user%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Correo:</label>
+            <h1><%=email_user%></h1>
+        </div>
+
+        <div class="conte-datos">
+            <label for="">Contraseña</label>
+            <h1><%=password_user%></h1>
+        </div>
+
+        <div class="botones">
+            <button id="btn" type="button">Actualizar datos</button>
+            <button id="btn2" type="button">Cambiar contraseña</button>
+        </div>
+    </div>
+
+
+    <footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",()=>{
+        document.location.href = "/usuario/actualizarDatos";
+    })
+
+    document.getElementById("btn2").addEventListener("click",()=>{
+        document.location.href = "/usuario/traerPassword";
+    })
+</script>
+</html>

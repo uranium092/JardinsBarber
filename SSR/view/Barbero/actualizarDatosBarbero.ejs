@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar datos</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="/barbero/styles/actualizarDatosBarbero.css">
+</head>
+
+<body>
+
+        <header>
+            <nav>
+                <div class="logo">Jardin's Barber</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/index">Inicio</a></li>
+                        <li><a  href="/barbero/verAgenda" >Agenda</a></li>
+                        <li><a href="/barbero/datosBarbero">Perfil</a></li>
+                        <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+
+    <input id="id_barber" type="number" hidden disabled  value="<%=id_barber%>">
+    <input type="text" hidden value="<%=another.passwordBarber%>" id="password_barber">
+    <input type="text" hidden value="<%=another.role%>" id="role">
+    
+
+
+        <div class="contenedor1">
+            <div class="contenedor2">
+                <form action="">
+                    <h2 class="tex">Actualizar Datos</h2>
+                    <div class="data">
+                        <img src="<%=urlImage%>" alt="" id="photo_img">
+                        <div class="contenedor3">
+                            <input type="file" id="file" accept="image/png,image/jpeg,image/jpg">
+                            <input type="button" value="Cambiar Foto" class="boton" onclick="document.getElementById('file').click()" >
+                        </div>
+
+
+                            <h1>Nombre</h1>
+                            <input id="name_barber" placeholder="Nombre" type="text" value="<%=name_barber%>" required>
+                            <h1>Telefono</h1>
+                            <input id="phone_barber" placeholder="Numero de telefono" type="text" value="<%=phone_barber%>" required>
+                            <h1>Correo</h1>
+                            <input id="email_barber" disabled placeholder="Correo electronico" type="email" value="<%=email_barber%>" required>
+                            <h1>Descripción</h1>
+                            <textarea name="" id="description_barber" required><%=description%></textarea>
+                    </div>
+
+                <div class="boto">
+                    <input type="submit">
+                </div>
+            </div>
+            
+        </div>
+
+
+    <footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+    <script>
+        let area = document.getElementById('description_barber').style.resize = "none";
+    </script>
+</body>
+<script src="/admin/JS/jquery-3.7.1.js"></script>
+<script src="/barbero/JS/DataUpdate.js"></script>
+</html>

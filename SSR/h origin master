@@ -1,0 +1,39 @@
+[33m93d37f1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Cambio de fondo Vista-Usuario
+[33m45bede8[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m adicion de vista de barbero
+[33mf566d69[m Optimización de middlewares de gestión de cookies y acceso. Se agrega renderizacion a urls desconocidas: 404
+[33md22920d[m Programar Cerrar Sesión y Accesos no permitidos a roles -(en proceso)
+[33m9edb471[m Re-Estructurando proyecto express para acceder a recursos css y js
+[33mf917dca[m Verificacion de cookies en TODAS las paginas -Ok
+[33md416a74[m Pichi POPO
+[33m9c2f4ed[m Se le coloco los estilos CSS a la pagina de cambiar contraseña
+[33m22b9dd3[m Nuevo cambio
+[33m3aa7681[m cambio mas
+[33m11448b3[m Se genero otro token API
+[33m0ec854c[m Actualizar datos usuario-- agregado
+[33m90f1a50[m Se realizo los cambios de los archivos HTML Y CSS de la pagina ACTUALIZAR DATOS
+[33m2b44307[m HOLA PICHI
+[33md147481[m Solucion de Bug que dejó el compañeraso Wainer Andrey
+[33m0222eef[m Picha mira
+[33m033c15e[m Programando Vista de usuario al iniciar sesión (Cookies Activas). -Falta la funcionalidad del <a href=...>Tu Perfil</a>
+[33m4656498[m Programacion del sistema de Cookies inicial. -Pruebas y Configuraciones
+[33m8b4f737[m Creacion vistaUsuario validacion de inicio Sesion
+[33m69e58ac[m Logica validacion inicio sesion Usuario, falta renderizado y cookies
+[33mb51a542[m Logica comunicacion front a spring, front a node -Wainer
+[33m3bc5fa6[m Registro de usuarios -FUNCIONAL. -Actualizar node_modules
+[33mb7d88ee[m Que desorden tan hp
+[33mfae4023[m otro mas
+[33mac959e9[m Se añadio la funcionalidad responsive, falta-> footer
+[33mbdc9fe2[m Merge branch 'master' of https://github.com/uranium092/Faraday-Project-node.js
+[33md831b76[m hola
+[33mb43336d[m Error endpoint solucionado
+[33ma5a9daa[m cambio
+[33m092cbf5[m Prueba funcionalidad Registro usuario
+[33m382da24[m Wainer, arreglalo
+[33mc63ed83[m Otro
+[33mf80d69b[m Estructurando directorios, para pag inicio; sin inicio de sesion activo
+[33m182c0cc[m Afinanado pagina de inicio. Resolviendo bugs de recursos
+[33mb0dfeac[m Creacion Pag Inicio, Sin login -cookies registradas
+[33md78029b[m Configurando vistas y motor (ejs)-embebed JavaScript
+[33m984b458[m Afinando Configuracion del commit anterior
+[33mb49ea1d[m Configuracion inicial del server
+[33ma9bcd5a[m Inicio de la APP, escrita en Node.js

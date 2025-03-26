@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="/barbero/styles/agenda.css">
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Jardin's Barber</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index">Inicio</a></li>
+                    <li><a href="/admin/verAgenda">Agenda</a></li>
+					<li><a href="/admin/barberos">Barberos</a></li>
+                    <li><a href="/admin/datosAdmin">Perfil</a></li>
+                    <li><a href="/borrarCookies" class="cerrar">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    
+    <form action="">
+        <h1>Inicio</h1>
+        <input type="text" id="id" hidden disabled value="<%=objeto.id%>">
+        <div class="conte">
+            <label>Fecha de Inicio:</label>
+            <input type="date" id="inicio">
+        </div>
+
+        <div class="conte">
+            <label>Hora de Inicio:</label>
+            <input type="time" id="timeInicio" required>
+        </div>  
+        
+        <h1>Final</h1>
+
+        <div class="conte">
+            <label for="">Fecha Final:</label>
+            <input type="date" id="fin" required disabled>
+        </div> 
+        <div class="conte">   
+            <label for="">Hora Final:</label>
+            <input type="time" id="timeFin" disabled required>
+        </div>    
+        <input type="submit" id="" value="Enviar" class="boton">
+    </form>
+
+
+    <footer id="pieDePagina">
+        <div id="footerBloque1">
+            <p>Cra. 4 #7 - 73, Jardín, Antioquia</p>
+            <p>Cel: 322-4567856</p>
+        </div><br>
+        
+        <div id="footerBloque2">
+            <p>Jardín-Antioquia</p>
+            <p>jardinsbarber@gmail.com</p>
+            <p style="font-weight: bold;">Jardin's Barber</p>
+            <div id="footerIcons">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/18096fdcd6.js" crossorigin="anonymous"></script>
+
+</body>
+<script src="/moment.js"></script>
+<script></script>
+<script src="/JS/Agenda/LogicaControlDeErrores.js"></script>
+<script src="/JS/Agenda/LogicaAgenda.js"></script>
+</html>

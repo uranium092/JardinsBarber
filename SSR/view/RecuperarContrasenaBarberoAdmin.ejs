@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar constrasena</title>
+    <link rel="shortcut icon" href="/PagInicio/ImagesPagInicio/favicon.png" type="image/x-icon">
+<style>
+    body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.contenedor {
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(239, 184, 16);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+}
+
+h1 {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.cont, .boton {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.boton {
+    background-color: rgb(239, 184, 16);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: rgb(255, 191, 0);
+}
+
+p{
+    margin: 16px 0 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    .cont, .boton {
+        padding: 6px;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <h2>Recuperar Contraseña</h2>
+            <h1>Nueva Contraseña</h1>
+            <input type="password" id="contra" class="cont"><br>
+            <h1>Confirmacion Contraseña</h1>
+            <input type="password" id="confirm" class="cont">
+            <input type="text" hidden value="<%=JSON.stringify(body)%>" id="body">
+            <input type="submit" class="boton">
+        </form>
+    </div>
+    <p class="info"></p>
+    
+</body>
+<script src="/usuario/JS/jquery-3.7.1.js"></script>
+<script src="/JS/recuperarContrasenaBarberoAdmin.js"></script>
+</html>

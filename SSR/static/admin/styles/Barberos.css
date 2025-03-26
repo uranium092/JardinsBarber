@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.cerrar{
+    color: rgb(239,184,16);
+    border-radius: 0.5rem;
+    padding: 5px 18px;
+}
+
+
+
+
+
+.contenedor-barber {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(15, 15, 15);
+    margin-bottom: 50px;
+}
+
+.hea {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.boton1{
+    background-color: rgb(239,184,16);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.boton1:hover {
+    background-color: rgb(255, 191, 0);
+}
+
+.hea a {
+    text-decoration: none;
+}
+
+.lista-barber {
+    display: flex;
+    flex-direction: column;
+}
+
+.barbero {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barbero img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.barber-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.barber-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.barber-action {
+    display: flex;
+    gap: 10px;
+}
+
+.watch, .delete {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.watch {
+    background-color: #767676;
+    color: white;
+}
+
+.watch:hover {
+    background-color: #505050;
+}
+
+.delete {
+    background-color: rgb(239,184,16);
+    color: white;
+}
+
+.delete:hover {
+    background-color: rgb(255, 191, 0);
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 0 0 25px;
+}
+footer #footerIcons p{
+    display: inline;
+}
+footer div p{
+    margin-bottom: 7px;
+}
+.fa-brands{
+    color: rgb(239,184,16);
+}
