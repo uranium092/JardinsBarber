@@ -28,6 +28,8 @@ Este proyecto es un sistema integral de gestión de citas para barberías, dise�
         * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos de 30 minutos (por ejemplo, 8:00 a.m. a 11:30 a.m, ó 9:30 a.m. a 03:00 p.m.).
         * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
 * **Visualización y reserva de citas:**
+    * Después de registrarse, los usuarios pueden examinar los perfiles de los barberos. Para ver la agenda y la disponibilidad de un barbero, deben pulsar el botón 'Agenda'. Para conocer más sobre el 
+      barbero, pueden pulsar cualquier otra parte del perfil.
     * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
     * El sistema muestra información detallada sobre las citas reservadas y permite a los usuarios cancelarlas si es necesario.
     * **Detalles de la visualización y reserva:**
@@ -94,7 +96,21 @@ Este sistema ofrece una solución completa para la gestión de barberías, facil
     ```
 
 2.  **MySQL:** Asegúrate de que MySQL esté en ejecución.
-3.  **Base de datos:** Crea una base de datos llamada `jardinsbarber` en tu instancia de MySQL.
+   
+3.  **Credenciales MySQL**: Asegúrate de adaptar las credenciales de MySQL en el `application.properties` (ubicado en `src/main/resources`).
+       ```properties
+    spring.datasource.username=root
+    spring.datasource.password=admin
+    ```
+    * Por defecto root y admin son las credenciales locales, cámbialo si es necesario.
+       
+4.  **Envío de correos** Por razones de seguridad, no podemos exponer las credenciales Smtp de Gmail. Para habilitarlo, configure sus propias credenciales SMTP de Gmail en el archivo `application.properties` (ubicado en `src/main/resources`).
+    ```properties
+    email.auth.smtp=-
+    password.auth.smtp=-
+    ```
+    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación. Si no especifica nada, el sistema tendrá la 
+    funcionalidad de notificación desactivada.
 
 ### SSR (Frontend)
 
