@@ -97,7 +97,7 @@ Este sistema ofrece una solución completa para la gestión de barberías, facil
 
 2.  **MySQL:** Asegúrate de que MySQL esté en ejecución.
    
-3.  **Credenciales MySQL**: Asegúrate de adaptar las credenciales de MySQL en el `application.properties` (ubicado en `src/main/resources`)
+3.  **Credenciales MySQL**: Asegúrate de adaptar las credenciales de MySQL en el `application.properties` (ubicado en `src/main/resources`).
        ```properties
     spring.datasource.username=root
     spring.datasource.password=admin
@@ -109,7 +109,8 @@ Este sistema ofrece una solución completa para la gestión de barberías, facil
     email.auth.smtp=-
     password.auth.smtp=-
     ```
-    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación.
+    * `email.auth.smtp` equivalente al userName y ` password.auth.smtp` equivalente a la contraseña de aplicación. Si no especifica nada, el sistema tendrá la 
+    funcionalidad de notificación desactivada.
 
 ### SSR (Frontend)
 
