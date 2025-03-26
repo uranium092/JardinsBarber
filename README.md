@@ -1,88 +1,112 @@
-# SenaSoft2024
+# JardinsBarber
 
-Este proyecto fue desarrollado en compañia de [Daniel Henao](https://github.com/VenaoX69) como solución al reto propuesto y patrocinado por IBM dentro de la categoría 'Desarrollo Libre' en el evento anual SENASOFT (Edición Cali, 2024). Nuestro equipo obtuvo el tercer lugar a nivel nacional entre 27 regionales, tras 3 días de competición, demostrando la calidad y eficacia de nuestra solución.
+Este proyecto es un sistema integral de gestión de citas para barberías, diseñado para optimizar la administración del negocio y mejorar la experiencia tanto de los barberos como de los usuarios.
 
-**Tecnologías:** React, MUI, Java/Spring Boot/Spring Data, Maven, MongoDB, Leaflet.
+## Funcionalidades principales
 
-El desarrollo de esta aplicación es el resultado de un análisis detallado y la resolución de los problemas planteados en el reto, cuyos detalles pueden consultarse en [este link](https://drive.google.com/file/d/1f2brAkReuinyZOcCo8WXShZaNO01Ej9R/view).
+* **Gestión de roles:**
+    * El sistema distingue tres roles principales: administrador (que también actúa como barbero), barbero común y usuario.
+    * El administrador tiene control total sobre el negocio, incluyendo la gestión de personal (creación, actualización y eliminación de barberos) y la configuración de su propia agenda.
+* **Gestión de perfiles:**
+    * Todos los barberos, incluido el administrador, pueden gestionar su perfil, incluyendo la foto de perfil.
+    * El sistema asigna una foto de perfil por defecto a los barberos que no suben una propia.
+* **Notificaciones por correo electrónico:**
+    * El sistema envía notificaciones por correo electrónico a todos los roles sobre acciones importantes relacionadas con sus cuentas, como solicitudes y confirmaciones de cambio de contraseña.
+    * Los usuarios también reciben notificaciones sobre sus citas agendadas, incluyendo detalles relevantes.
+* **Agendamiento en tiempo real:**
+    * La reserva de citas se refleja en tiempo real en las agendas de los barberos, permitiendo a otros usuarios ver la disponibilidad actualizada.
+    * El barbero tambien ve dicha actualizacion.
+* **Seguridad y manejo de sesiones:**
+    * El sistema implementa medidas de seguridad para proteger la navegación y restringir el acceso a rutas no autorizadas.
+    * Las sesiones de usuario se mantienen activas durante un período limitado para mayor comodidad.
+* **Gestión de agendas:**
+    * Tanto administradores como barberos pueden crear sus propias agendas, definiendo rangos de fechas y horas de atención.
+    * El sistema permite configurar la duración de las citas (con un máximo de 15 días) y ofrece recomendaciones para optimizar la visualización de la agenda.
+    * **Detalles de la creación de agendas:**
+        * Al crear una agenda, se especifican la fecha y hora de inicio, y la fecha y hora de fin.
+        * El sistema genera intervalos de citas dentro de ese rango, con una duración predefinida de 30 minutos.
+        * Se recomienda utilizar horas de inicio y fin que faciliten la división en intervalos exactos de 30 minutos (por ejemplo, 8:00 a.m. a 11:30 a.m, ó 9:30 a.m. a 03:00 p.m.).
+        * La fecha de inicio puede ser el dia actual o el dia siguiente, con un maximo de quince dias de duracion en la agenda.
+* **Visualización y reserva de citas:**
+    * Los usuarios registrados pueden ver la disponibilidad de los barberos y reservar citas en línea.
+    * El sistema muestra información detallada sobre las citas reservadas y permite a los usuarios cancelarlas si es necesario.
+    * **Detalles de la visualización y reserva:**
+        * Los usuarios ven la agenda del barbero seleccionado, con la hora de inicio y fin de cada cita (duración fija).
+        * Una vez reservada una cita, el usuario no puede agendar otra hasta que la actual finalice o sea cancelada.
+        * Si el usuario tiene una cita, podra ver los detalles de esa cita (datos del barbero, hora, dia, y un temporizador), de lo contrario, podra agendar una.
+* **Actualización de datos:**
+    * Todos los roles pueden actualizar sus datos personales y contraseñas.
+    * El sistema ofrece un mecanismo de recuperación de contraseñas para usuarios que olvidan sus credenciales.
 
-**Punto importante:**
+## Credenciales iniciales para probar el sistema
 
-Si deseas explorar las funcionalidades administrativas de la aplicación, utiliza el siguiente número de identificación para iniciar sesión como administrador: `9999`. Esta credencial te permitirá acceder a los roles y funciones administrativas descritos en el enlace del reto.
+* **Administrador:**
+    * Al clonar el repositorio, el sistema inicializa automáticamente un usuario administrador.
+    * Este usuario es el punto de partida para configurar el negocio, creando barberos y agendas.
+* **Barbero de prueba:**
+    * Para experimentar la funcionalidad del rol barbero, puedes iniciar sesión con las siguientes credenciales:
+        * Correo electrónico: `johnDoe@test.example.com`
+        * Contraseña: `development@password`
 
-Este repositorio contiene el frontend (React) y el backend (Spring Boot) para el proyecto SenaSoft2024.
+Este sistema ofrece una solución completa para la gestión de barberías, facilitando la administración del negocio y mejorando la experiencia de los usuarios.
+
+**Tecnologías:** 
+* **Backend:** Java, Spring Boot, Maven, Spring Data, Hibernate, MySQL.
+* **SSR:** JavaScript, Node.js, Express.js, EJS.
+* **Tecnologias SSR (Frontend):** JQuery, moment.js
+
+### Nota
+* Por razones de seguridad y de condición de entorno (DEVELOPMENT), la plataforma no se puede integrar a Meta-Instagram.
 
 ## Estructura del repositorio
 
-* `BackSenaSoft/`: Contiene el código fuente del backend (Spring Boot).
-* `frontSenaSoft/`: Contiene el código fuente del frontend (React).
+* `Backend/`: Contiene el código fuente del backend (Spring Boot).
+* `SSR/`: Contiene el código fuente del SSR (Frontend).
 
 ## Primeros pasos
 
 1.  **Clonar el repositorio:**
 
     ```bash
-    git clone https://github.com/uranium092/SenaSoft2024
+    git clone https://github.com/uranium092/JardinsBarber
     ```
 
 ## Requisitos previos
 
-### Backend (BackSenaSoft)
+### Backend (Backend)
 
 1.  **Java:** Descarga e instala el JDK (versión >= 17) desde [Oracle](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
-2.  **MongoDB:**
-    * Instala MongoDB Community Edition (versión >= 5.0.26) desde [MongoDB](https://www.mongodb.com/try/download/community).
-    * Opcionalmente, puedes utilizar [MongoDB Atlas](https://www.mongodb.com/atlas/database) (servicio en la nube).
+2.  **MySQL:** Descarga e instala [MySQL](https://www.mysql.com/downloads/).
 
-### Frontend (frontSenaSoft)
+### SSR (Frontend)
 
 1.  **Node.js:** Descarga e instala Node.js (versión >= 20.12.2) desde [NodeOrg](https://nodejs.org/en/download).
-2.  **BackSenaSoft:** Asegúrate de que el backend esté en ejecución (ver instrucciones abajo).
+2.  **Backend:** Asegúrate de que el backend esté en ejecución (ver instrucciones abajo).
 
 ## Configuración
 
-### Backend (BackSenaSoft)
+### Backend (Backend)
 
 1.  **Navegar al directorio del backend:**
 
     ```bash
-    cd SenaSoft2024/BackSenaSoft
+    cd JardinsBarber/Backend
     ```
 
-2.  **MongoDB:** Asegúrate de que MongoDB esté en ejecución.
-3.  **Base de datos:** Crea una base de datos llamada `SenaSoft` en tu instancia de MongoDB (local o Atlas).
-4.  **`application.properties`:** El archivo `application.properties` se encuentra en `src/main/resources/`. Por defecto, está configurado para conectar con MongoDB en localhost. Si estás utilizando MongoDB Atlas, debes modificar la cadena de conexión en este archivo.
+2.  **MySQL:** Asegúrate de que MySQL esté en ejecución.
+3.  **Base de datos:** Crea una base de datos llamada `jardinsbarber` en tu instancia de MySQL.
 
-    ```properties
-    spring.application.name=BackSenaSoft
-    spring.data.mongodb.uri=mongodb://localhost:27017/SenaSoft
-    ```
+### SSR (Frontend)
 
-    Si usas MongoDB Atlas, la cadena de conexión se verá similar a:
-
-    ```properties
-    spring.data.mongodb.uri=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/SenaSoft?retryWrites=true&w=majority
-    ```
-
-### Frontend (frontSenaSoft)
-
-1.  **Navegar al directorio del frontend:**
+1.  **Navegar al directorio del SSR (Frontend):**
 
     ```bash
-    cd SenaSoft2024/frontSenaSoft
+    cd JardinsBarber/SSR
     ```
-
-2.  **`.env`:** Crea un archivo `.env` en el directorio `frontSenaSoft/` con la siguiente información:
-
-    ```properties
-    VITE_SERVER_URL=http://localhost:8080
-    ```
-
-    * Este archivo guarda la URL del backend; si este no está en ejecución en el puerto `:8080`, ajusta la URL en el archivo `.env`.
 
 ## Ejecución
 
-### Backend (BackSenaSoft)
+### Backend (Backend)
 
 1.  **Ejecutar la aplicación:**
 
@@ -111,9 +135,10 @@ Este repositorio contiene el frontend (React) y el backend (Spring Boot) para el
             ```bash
             java -jar target/app.jar
             ```
-            * Reemplaza app.jar por el nombre del archivo .jar generado en `/target`
 
-### Frontend (frontSenaSoft)
+            * Reemplaza `app.jar` por el nombre del archivo .jar generado en `/target`
+
+### SSR (Frontend)
 
 1.  **Instalar dependencias:**
 
@@ -124,12 +149,12 @@ Este repositorio contiene el frontend (React) y el backend (Spring Boot) para el
 2.  **Ejecutar el frontend:**
 
     ```bash
-    npm run dev
+    npm start
     ```
 
-    * El frontend estará disponible en `http://localhost:5173`.
+    * El frontend estará disponible en `http://localhost:16000`.
 
 ## Recomendaciones
 
-* Asegúrate de que el backend se esté ejecutando en el puerto `:8080`, ya que el frontend está configurado para conectarse a esta URL por defecto.
-* Si necesitas cambiar el puerto del backend, actualiza la variable `VITE_SERVER_URL` en el archivo `.env` del frontend.
+* Asegúrate de que el backend se esté ejecutando estrictamente en el puerto `:8080`.
+
