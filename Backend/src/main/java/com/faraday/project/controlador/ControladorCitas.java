@@ -2,11 +2,8 @@ package com.faraday.project.controlador;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,21 +18,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.faraday.project.entidades.Barbero;
 import com.faraday.project.entidades.Cita;
-import com.faraday.project.entidades.Usuario;
 import com.faraday.project.services.ServicioBarbero;
 import com.faraday.project.services.ServicioCita;
 import com.faraday.project.services.ServicioUsuario;
 
 import Group.GrouperData;
-import MailManager.SendMail;
 
 @RestController
 @RequestMapping("/cita")
 @CrossOrigin
-
-
 public class ControladorCitas {
 	
 	private GrouperData group=new GrouperData();
@@ -76,13 +68,6 @@ public class ControladorCitas {
 		LocalDateTime end=LocalDateTime.of(anioFin,mesFin,diaFin,horaFin,minutoFin); 
 		
 		LocalDateTime date=LocalDateTime.of(anioInicio,mesInicio,diaInicio,horaInicio,minutoInicio); 
-		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
-		
-		
-	       ArrayList<Object> lista = new ArrayList<>();
-	       	       
-	       
-	      int tiki = 0; 
 		
 		while(date.compareTo(end)<0) {
 		       LocalDateTime horaFinn = LocalDateTime.of(date.getYear(),date.getMonth(),date.getDayOfMonth(),date.getHour(),date.getMinute()).plusMinutes(30);		       

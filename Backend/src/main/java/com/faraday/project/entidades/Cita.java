@@ -2,7 +2,6 @@ package com.faraday.project.entidades;
 
 import java.time.LocalDateTime;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
 
 @Entity

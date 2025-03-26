@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.faraday.project.entidades.Barbero;
-import com.faraday.project.entidades.Usuario;
 import com.faraday.project.repositorio.RepositorioBarbero;
 
 @Service

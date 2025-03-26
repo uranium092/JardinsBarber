@@ -1,7 +1,6 @@
 package com.faraday.project.controlador;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;

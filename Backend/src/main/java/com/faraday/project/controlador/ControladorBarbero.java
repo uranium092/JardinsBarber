@@ -3,9 +3,6 @@ package com.faraday.project.controlador;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,9 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.faraday.project.entidades.Barbero;
-import com.faraday.project.entidades.* ;
 import com.faraday.project.services.ServicioBarbero;
-import com.faraday.project.services.ServicioCita;
 
 import MailManager.SendMail;
 import MailManager.SendManyMails;
@@ -44,8 +39,6 @@ public class ControladorBarbero {
 	
 	@Autowired
 	private ServicioBarbero servicioBarbero;
-	
-	@Autowired private ServicioCita servicioCita;
 	
 	@PostMapping("/insertarBarberoSinFoto")
 	public ResponseEntity<?> agregarBarberoSinFoto(@RequestBody Barbero barber){

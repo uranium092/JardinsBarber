@@ -4,10 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.faraday.project.entidades.Barbero;
 import com.faraday.project.entidades.Cita;
 import com.faraday.project.repositorio.RepositorioBarbero;
 import com.faraday.project.repositorio.RepositorioCita;
