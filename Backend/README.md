@@ -29,7 +29,7 @@ Este repositorio contiene el backend (Spring Boot) para el proyecto JardinsBarbe
 
 ## Configuración
 
-1.  **MongoDB:** Asegúrate de que MySQL esté en ejecución.
+1.  **MySQL:** Asegúrate de que MySQL esté en ejecución.
 2.  **Base de datos:** Crea una base de datos llamada `jardinsbarber` en tu instancia de MySQL.
 
 ## Ejecución
@@ -61,7 +61,7 @@ Este repositorio contiene el backend (Spring Boot) para el proyecto JardinsBarbe
             ```bash
             java -jar target/app.jar
             ```
-            * Reemplaza app.jar por el nombre del archivo .jar generado en `/target`
+            * Reemplaza `app.jar` por el nombre del archivo .jar generado en `/target`
 
 ## Nota
 * El backend debe de estar corriendo estrictamente en el puerto `:8080`
