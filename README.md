@@ -2,6 +2,8 @@
 
 Este proyecto es un sistema integral de gestión de citas para barberías, diseñado para optimizar la administración del negocio y mejorar la experiencia tanto de los barberos como de los usuarios.
 
+En colaboración de [Wainer Loaiza](https://github.com/WainerFSD), [Juan Ruiz](https://github.com/Juanesvc7), [Yeison Perez](https://github.com/Yeison04p).
+
 ## Funcionalidades principales
 
 * **Gestión de roles:**
