@@ -49,7 +49,7 @@ En colaboración de [Wainer Loaiza](https://github.com/WainerFSD), [Juan Ruiz](h
     * Este usuario es el punto de partida para configurar el negocio, creando barberos y agendas.
 * **Barbero de prueba:**
     * Para experimentar la funcionalidad del rol barbero, puedes iniciar sesión con las siguientes credenciales:
-        * Correo electrónico: `johnDoe@test.example.com`
+        * Correo electrónico: `johnKimble@test.example.com`
         * Contraseña: `development@password`
 
 Este sistema ofrece una solución completa para la gestión de barberías, facilitando la administración del negocio y mejorando la experiencia de los usuarios.
