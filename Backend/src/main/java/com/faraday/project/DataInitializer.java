@@ -17,8 +17,8 @@ public class DataInitializer {
     @Bean
     CommandLineRunner initData() {
         return args -> {
-           if(barber.existenciaDeCorreo("johnDoe@test.example.com").size()==0) {
-        	   barber.agregarBarbero(new Barbero("John Doe", "3240002200","johnDoe@test.example.com","development@password","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua","","admin"));
+           if(barber.existenciaDeCorreo("johnKimble@test.example.com").size()==0) {
+        	   barber.agregarBarbero(new Barbero("John Kimble", "3240002200","johnKimble@test.example.com","development@password","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua","","admin"));
            }
         };
     }
